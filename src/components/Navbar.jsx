@@ -31,13 +31,13 @@ const Navbar = () => {
           <FaGithub />
         </a>
         <a
-          href="https://www.instagram.com/khalid_anwar_antur/"
+          href="https://www.instagram.com/khalid_anwar_antur/" target="_blank"
           className="hover:text-pink-500 transition transform hover:scale-110"
         >
           <FaInstagram />
         </a>
         <a
-          href="https://x.com/KhalidAnwa64850"
+          href="https://x.com/KhalidAnwa64850" target="_blank"
           className="hover:text-blue-400 transition transform hover:scale-110"
         >
           <FaXTwitter />
