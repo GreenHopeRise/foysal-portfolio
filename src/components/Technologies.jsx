@@ -3,6 +3,7 @@ import { FaSquareJs } from "react-icons/fa6";
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiN8N } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const Technologies = () => {
   const techs = [
@@ -18,19 +19,39 @@ const Technologies = () => {
 
   return (
     <div id="technologies" className="py-16 px-4">
-      <h2 className="mb-12 text-center text-3xl md:text-5xl font-bold">Technologies</h2>
+      <motion.h2
+        className="mb-12 text-center text-3xl md:text-5xl font-bold"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+      >
+        Technologies
+      </motion.h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
         {techs.map((tech, i) => (
-          <div
+          <motion.div
             key={i}
-            className="card bg-base-200 shadow-xl hover:scale-105 transition transform duration-300"
+            className="card bg-transparent rounded-xl cursor-pointer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#1f2937", // bg-stone-800
+              borderRadius: "1.5rem", // rounded-3xl
+              boxShadow: "0 0 15px #36ff0f, 0 0 30px #36ff0f, 0 0 45px #36ff0f",
+            }}
           >
             <div className="card-body flex flex-col items-center justify-center">
-              <div className="text-6xl md:text-7xl mb-3">{tech.icon}</div>
-              <h3 className="card-title text-center text-stone-300 text-sm md:text-base">{tech.name}</h3>
+              <div className="text-6xl md:text-7xl mt-3 mb-3">{tech.icon}</div>
+              <h3 className="card-title text-center text-stone-300 text-sm md:text-base">
+                {tech.name}
+              </h3>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

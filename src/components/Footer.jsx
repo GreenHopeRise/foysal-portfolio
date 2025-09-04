@@ -2,56 +2,81 @@ import React from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const sections = ["hero", "technologies", "projects", "experience", "contact"];
+
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <footer className="bg-stone-900 rounded-2xl text-stone-300 py-10 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <motion.div
+        className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+      >
         {/* Logo */}
-        <div>
+        <motion.div whileHover={{ scale: 1.05, textShadow: "0 0 10px #36ff0f, 0 0 20px #36ff0f" }}>
           <a href="#" className="text-3xl font-bold mb-2 block md:mb-0">
             ƙ𝓐
           </a>
           <p className="text-sm text-stone-500">© 2025 Khalid Anwar. All rights reserved.</p>
-        </div>
+        </motion.div>
 
         {/* Social Links */}
         <div className="flex items-center gap-6 text-2xl">
-          <a
+          <motion.a
             href="#"
-            className="hover:text-cyan-400 transition transform hover:scale-110"
+            whileHover={{ scale: 1.2, color: "#0ff", textShadow: "0 0 10px #36ff0f, 0 0 20px #36ff0f" }}
+            className="transition transform"
           >
             <IoLogoLinkedin />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
-            className="hover:text-gray-400 transition transform hover:scale-110"
+            whileHover={{ scale: 1.2, color: "#0ff", textShadow: "0 0 10px #36ff0f, 0 0 20px #36ff0f" }}
+            className="transition transform"
           >
             <FaGithub />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
-            className="hover:text-pink-500 transition transform hover:scale-110"
+            whileHover={{ scale: 1.2, color: "#f0f", textShadow: "0 0 10px #f0f, 0 0 20px #f0f" }}
+            className="transition transform"
           >
             <FaInstagram />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
-            className="hover:text-blue-400 transition transform hover:scale-110"
+            whileHover={{ scale: 1.2, color: "#00f", textShadow: "0 0 10px #00f, 0 0 20px #00f" }}
+            className="transition transform"
           >
             <FaXTwitter />
-          </a>
+          </motion.a>
         </div>
 
         {/* Quick Links */}
         <div className="flex flex-col md:flex-row items-center gap-4 text-sm">
-          <a href="#hero" className="hover:text-white transition">Home</a>
-          <a href="#technologies" className="hover:text-white transition">Technologies</a>
-          <a href="#projects" className="hover:text-white transition">Projects</a>
-          <a href="#experience" className="hover:text-white transition">Experience</a>
-          <a href="#contact" className="hover:text-white transition">Contact</a>
+          {sections.map((sec, i) => (
+            <motion.button
+              key={i}
+              onClick={() => handleScroll(sec)}
+              className="transition bg-transparent border-none text-stone-300 hover:text-[#36ff0f]"
+              whileHover={{ textShadow: "0 0 5px #36ff0f, 0 0 10px #36ff0f" }}
+            >
+              {sec.charAt(0).toUpperCase() + sec.slice(1)}
+            </motion.button>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

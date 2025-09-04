@@ -1,42 +1,63 @@
 import { CONTACT } from "../assets";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const contactItems = [
+    { label: "Address", value: CONTACT.address },
+    { label: "Phone (whatsapp)", value: CONTACT.phoneNo },
+    { label: "Email", value: CONTACT.email, isLink: true },
+  ];
+
   return (
-    <div id="contact" className="border-stone-900 pb-20 px-4">
-      <h2 className="my-10 text-center text-3xl md:text-4xl font-semibold">
+    <div id="contact" className="pb-20 px-4">
+      <motion.h2
+        className="my-10 text-center text-3xl md:text-4xl font-semibold"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+      >
         Get in Touch
-      </h2>
+      </motion.h2>
 
       <div className="max-w-3xl mx-auto text-center md:text-left tracking-tighter flex flex-col md:flex-row md:justify-between gap-6">
-  {/* Address */}
-  <div className="my-2 group transition hover:shadow-[0_0_15px_3px_#36ff0f] rounded-lg p-2">
-    <p className="text-lg font-medium">Address</p>
-    <p className="text-stone-700 group-hover:text-stone-100 transition">
-      {CONTACT.address}
-    </p>
-  </div>
-
-  {/* Phone */}
-  <div className="my-2 group transition hover:shadow-[0_0_15px_3px_#36ff0f] rounded-lg p-2">
-    <p className="text-lg font-medium">
-      Phone <span className="text-stone-500">(whatsapp)</span>
-    </p>
-    <p className="text-stone-700 group-hover:text-stone-100 transition">
-      {CONTACT.phoneNo}
-    </p>
-  </div>
-
-  {/* Email */}
-  <div className="my-2 group transition hover:shadow-[0_0_15px_3px_#36ff0f] rounded-lg p-2">
-    <p className="text-lg font-medium">Email</p>
-    <a
-      href={`mailto:${CONTACT.email}`}
-      className="text-stone-700 border-b group-hover:text-stone-100 transition"
-    >
-      {CONTACT.email}
-    </a>
-  </div>
-</div>
+        {contactItems.map((item, index) => (
+          <motion.div
+            key={index}
+            className="my-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <p className="text-lg font-medium">{item.label}</p>
+            {item.isLink ? (
+              <motion.a
+                href={`mailto:${item.value}`}
+                className="text-stone-700 border-b transition"
+                whileHover={{
+                  color: "#36ff0f",
+                  textShadow:
+                    "0 0 5px #36ff0f, 0 0 10px #36ff0f, 0 0 20px #36ff0f",
+                }}
+              >
+                {item.value}
+              </motion.a>
+            ) : (
+              <motion.p
+                className="text-stone-700 transition"
+                whileHover={{
+                  color: "#36ff0f",
+                  textShadow:
+                    "0 0 5px #36ff0f, 0 0 10px #36ff0f, 0 0 20px #36ff0f",
+                }}
+              >
+                {item.value}
+              </motion.p>
+            )}
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
