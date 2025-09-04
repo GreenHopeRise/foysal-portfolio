@@ -21,15 +21,15 @@ const Contact = () => {
         </div>
 
         {/* Email */}
-        <div>
-          <p className="my-2 text-lg font-medium">Email</p>
-          <a
-            href={`mailto:${CONTACT.email}`}
-            className="text-stone-700 border-b hover:text-stone-100 transition"
-          >
-            {CONTACT.email}
-          </a>
-        </div>
+        <div className="my-2 group transition hover:shadow-[0_0_15px_3px_rgba(34,197,94,0.7)] rounded-lg p-2">
+  <p className="text-lg font-medium">Email</p>
+  <a
+    href={`mailto:${CONTACT.email}`}
+    className="text-stone-700 border-b hover:text-stone-100 transition"
+  >
+    {CONTACT.email}
+  </a>
+</div>
       </div>
     </div>
   );
