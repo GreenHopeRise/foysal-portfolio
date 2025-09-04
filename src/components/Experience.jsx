@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Experience = () => {
   return (
     <div id="experience" className="pb-16 px-4">
+      {/* Section Title */}
       <motion.h2
         className="my-12 text-center text-3xl md:text-4xl font-semibold"
         initial={{ opacity: 0, y: 20 }}
@@ -17,20 +18,29 @@ const Experience = () => {
 
       {/* Horizontal scroll container */}
       <motion.div
-        className="flex space-x-8 px-4 py-6 overflow-x-auto relative snap-x snap-mandatory"
-        style={{ overflow: "visible" }}
+        className="flex gap-6 py-6 overflow-x-auto snap-x snap-mandatory"
+        style={{ cursor: "grab" }}
+        whileTap={{ cursor: "grabbing" }}
       >
         {EXPERIENCES.map((experience, index) => (
           <motion.div
             key={index}
-            className="flex-shrink-0 w-80 lg:w-96 bg-stone-900 rounded-3xl p-6 snap-center cursor-pointer"
-            initial={{ opacity: 0, y: 30 }}
+            className="
+              flex-shrink-0 
+              w-full sm:w-[320px] md:w-[360px] lg:w-[400px] 
+              bg-stone-900 rounded-3xl p-6 snap-center cursor-pointer
+            "
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: index * 0.01 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.15,
+              ease: "easeInOut",
+            }}
             whileHover={{
-              scale: 1.05,
-              rotate: 3,
+              scale: 1.08,
+              rotate: 2,
               boxShadow:
                 "0 0 20px #36ff0f, 0 0 40px #36ff0f, 0 0 60px #36ff0f",
             }}
