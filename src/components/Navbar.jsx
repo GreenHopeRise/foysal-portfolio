@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ const Navbar = () => {
             textShadow: "0 0 5px #36ff0f, 0 0 10px #36ff0f, 0 0 20px #36ff0f",
           }}
         >
-          ƙ𝓐
+          𝓕𝓗
         </motion.a>
       </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
           <IoLogoLinkedin />
         </motion.a>
         <motion.a
-          href="https://github.com/GreenHopeRise"
+          href=""
           target="_blank"
           whileHover={{ scale: 1.2, color: "#0ff", textShadow: "0 0 5px #36ff0f, 0 0 10px #36ff0f" }}
           className="transition transform"
@@ -45,7 +45,7 @@ const Navbar = () => {
           <FaGithub />
         </motion.a>
         <motion.a
-          href="https://www.instagram.com/khalid_anwar_antur/"
+          href="https://www.instagram.com/faisal_habib_07?igsh=MXRldWYzemV0NjR6Ng=="
           target="_blank"
           whileHover={{ scale: 1.2, color: "#f0f", textShadow: "0 0 5px #f0f, 0 0 10px #f0f" }}
           className="transition transform"
@@ -53,12 +53,20 @@ const Navbar = () => {
           <FaInstagram />
         </motion.a>
         <motion.a
-          href="https://x.com/KhalidAnwa64850"
+          href="https://x.com/Faisal_Habib_07"
           target="_blank"
           whileHover={{ scale: 1.2, color: "#00f", textShadow: "0 0 5px #00f, 0 0 10px #00f" }}
           className="transition transform"
         >
           <FaXTwitter />
+        </motion.a>
+        <motion.a
+          href="https://www.facebook.com/share/17NKeCdDKk/"
+          target="_blank"
+          whileHover={{ scale: 1.2, color: "#00f", textShadow: "0 0 5px #00f, 0 0 10px #00f" }}
+          className="transition transform"
+        >
+          <FaFacebook />
         </motion.a>
       </div>
     </motion.nav>

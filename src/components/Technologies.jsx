@@ -1,20 +1,23 @@
 import { FaCss3, FaHtml5, FaGithub } from "react-icons/fa";
 import { FaSquareJs } from "react-icons/fa6";
-import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiN8N } from "react-icons/si";
+import { RiReactjsLine, RiRfidFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiAdobelightroom, SiAutocad, SiCanva, SiGoogledocs, SiN8N } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { PiMicrosoftExcelLogoFill, PiMicrosoftPowerpointLogoFill } from "react-icons/pi";
+import { GiArtificialIntelligence } from "react-icons/gi";
+
 
 const Technologies = () => {
   const techs = [
-    { icon: <FaHtml5 className="text-orange-500" />, name: "HTML" },
-    { icon: <FaCss3 className="text-blue-500" />, name: "CSS" },
-    { icon: <FaSquareJs className="text-yellow-500" />, name: "JavaScript" },
-    { icon: <RiReactjsLine className="text-cyan-500" />, name: "React" },
-    { icon: <RiTailwindCssFill className="text-cyan-400" />, name: "Tailwind" },
-    { icon: <TbBrandFramerMotion className="text-pink-400" />, name: "Framer Motion" },
-    { icon: <SiN8N className="text-orange-400" />, name: "n8n" },
-    { icon: <FaGithub className="text-gray-300" />, name: "GitHub" },
+    { icon: <SiAutocad className="text-orange-500" />, name: "Auto CAD" },
+    { icon: <RiRfidFill className="text-cyan-500" />, name: "RFID" },
+    { icon: <PiMicrosoftExcelLogoFill className="text-yellow-500" />, name: "Excel" },
+    { icon: <SiGoogledocs className="text-cyan-500" />, name: "Docs" },
+    { icon: <SiCanva className="text-cyan-400" />, name: "Canva" },
+    { icon: <GiArtificialIntelligence className="text-pink-400" />, name: "A.I." },
+    { icon: <PiMicrosoftPowerpointLogoFill className="text-orange-400" />, name: "Power Point" },
+    { icon: <SiAdobelightroom className="text-green-500" />, name: "Light Room" },
   ];
 
   return (

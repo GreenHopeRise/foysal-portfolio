@@ -37,7 +37,7 @@ export const PROJECTS = [
     description:
       "A fully functional service based website with features like Get in touch, subscription, and Pricing.",
     technologies: ["HTML", "CSS", "Js", "React", "Motion","Tailwing","DaisyUI" ],
-    links: "https://mordern-react-project.vercel.app/"
+    links: ""
   },
   {
     title: "Mordern Service Website",
@@ -45,7 +45,7 @@ export const PROJECTS = [
     description:
       "A mordern craetivity VR app. Ideas to bring that in life with initiative development tools.",
     technologies: ["HTML", "CSS", "React", "Tailwing","DaisyUI"],
-    links: "https://virtual-r-alpha-liard.vercel.app/"
+    links: ""
   },
   {
     title: "Semi E-comarce Website",
@@ -53,13 +53,13 @@ export const PROJECTS = [
     description:
       "A semi e-comarce website showcasing product, add cart, pricing and contact information.",
     technologies: ["HTML", "CSS", "React", "Tailwind"],
-    links: "https://semi-ecomarce.vercel.app/"
+    links: ""
   },
 
 ];
 
 export const CONTACT = {
   address: "DSC, Savar, Dhaka, Bangladesh ",
-  phoneNo: "01603540720",
-  email: "khalidanwarantur967@icloud.com",
+  phoneNo: "+8801631031977",
+  email: "faisalhabib3399@gmail.com",
 };

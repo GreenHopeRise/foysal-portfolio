@@ -24,8 +24,8 @@ function App() {
         <Navbar />
         <Hero />
         <Technologies />
-        <Projects />
-        <Experience />
+        {/* <Projects /> */}
+        {/* <Experience /> */}
         <Contact />
         <Footer/>
       </div>

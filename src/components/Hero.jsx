@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profile from "../assets/khalid.jpeg";
+import profile from "../assets/foysal.jpeg";
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, rotateX: 2 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              Khalid Anwar
+              Foysal Hossain
             </motion.h2>
 
             <motion.span
@@ -26,7 +26,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, rotateY: 2 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              Frontend Developer
+              Textile Engineer
             </motion.span>
 
             <motion.p
@@ -34,16 +34,11 @@ const Hero = () => {
               whileHover={{ scale: 1.01 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              I’m a passionate React developer with hands-on experience in
-              building modern, responsive, and user-friendly web applications. I
-              specialize in creating clean UI, writing efficient code, and
-              turning ideas into smooth digital experiences. Always eager to
-              learn and explore new tools, I focus on delivering impactful
-              solutions that make a difference.
+              A hardworking individual looking for a challenging position where I can showcase my skills and contribute to the growth of the organization. I would like to enhance my technical and soft skills by taking up challenging assignments and expanding my knowledge.
             </motion.p>
 
             <motion.a
-              href="https://drive.google.com/file/d/1nWIs82_DU85G_SL388_gqSkoTcWcm3tB/view?usp=sharing"
+              href="https://docs.google.com/document/d/1NPFXPz1XM3kxwTf05ygvS4_aTIXvebc2FdekJcDs8WA/edit?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               download

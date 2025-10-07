@@ -26,9 +26,9 @@ const Footer = () => {
         {/* Logo */}
         <motion.div whileHover={{ scale: 1.05, textShadow: "0 0 10px #36ff0f, 0 0 20px #36ff0f" }}>
           <a href="#" className="text-3xl font-bold mb-2 block md:mb-0">
-            ƙ𝓐
+            𝓕𝓗
           </a>
-          <p className="text-sm text-stone-500">© 2025 Khalid Anwar. All rights reserved.</p>
+          <p className="text-sm text-stone-500">© 2025 Foysal Hossain. All rights reserved.</p>
         </motion.div>
 
         {/* Social Links */}
@@ -48,14 +48,14 @@ const Footer = () => {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.instagram.com/faisal_habib_07?igsh=MXRldWYzemV0NjR6Ng=="
             whileHover={{ scale: 1.2, color: "#f0f", textShadow: "0 0 10px #f0f, 0 0 20px #f0f" }}
             className="transition transform"
           >
             <FaInstagram />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://x.com/Faisal_Habib_07"
             whileHover={{ scale: 1.2, color: "#00f", textShadow: "0 0 10px #00f, 0 0 20px #00f" }}
             className="transition transform"
           >
