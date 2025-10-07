@@ -13,7 +13,7 @@ const Experience = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1 }}
       >
-        Experience
+        Skills
       </motion.h2>
 
       {/* Scroll Container */}
@@ -47,21 +47,14 @@ const Experience = () => {
               </span>
             </h3>
 
-            <p className="mb-4 text-stone-300 leading-relaxed">
-              {experience.description}
-            </p>
+            
+            <ul className="mb-4 text-stone-300 leading-relaxed list-disc">
+              <li>Standards (ISO, ASTM, AATCC, BIS) for textile testing.</li>
+              <li>Hands-on testing of strength, color fastness, and fabric performance.</li>
+            </ul>
 
             {/* Tech badges */}
-            <div className="flex flex-wrap gap-2">
-              {experience.technologies.map((tech, i) => (
-                <span
-                  key={i}
-                  className="rounded bg-stone-800 px-3 py-1 text-sm font-medium text-stone-300 cursor-pointer hover:shadow-[0_0_5px_#36ff0f,0_0_10px_#36ff0f,0_0_20px_#36ff0f] transition"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+            
           </motion.div>
         ))}
       </motion.div>

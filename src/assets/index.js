@@ -9,10 +9,11 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2025 - Present",
-    role: "React Developer (Remote & Freelance)",
-    company: "Freelance / Upwork & Remote Clients",
-    description: `Currently working with international clients and freelance projects. Building responsive and scalable web applications using React and Tailwind CSS. Collaborating with clients worldwide to deliver modern, user-friendly solutions.`,
+    year: "2025 - present",
+    role: "Textile Testing & Quality Control",
+    company: "Daffodil International University",
+    description: `• Standards (ISO, ASTM, AATCC, BIS) for textile testing.
+• Hands-on testing of strength, color fastness, and fabric performance.`,
     technologies: ["React.js", "Next.js", "TailwindCSS", "JavaScript"],
   },
   {

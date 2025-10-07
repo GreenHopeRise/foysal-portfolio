@@ -36,14 +36,7 @@ const Navbar = () => {
         >
           <IoLogoLinkedin />
         </motion.a>
-        <motion.a
-          href=""
-          target="_blank"
-          whileHover={{ scale: 1.2, color: "#0ff", textShadow: "0 0 5px #36ff0f, 0 0 10px #36ff0f" }}
-          className="transition transform"
-        >
-          <FaGithub />
-        </motion.a>
+       
         <motion.a
           href="https://www.instagram.com/faisal_habib_07?igsh=MXRldWYzemV0NjR6Ng=="
           target="_blank"
