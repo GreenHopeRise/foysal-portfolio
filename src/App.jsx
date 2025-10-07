@@ -7,7 +7,10 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Card from './components/card';
+import Skills from './components/Skills';
+
+
+
 
 function App() {
   return (
@@ -27,7 +30,7 @@ function App() {
         <Technologies />
         {/* <Projects /> */}
         {/* <Experience /> */}
-        <Card/>
+        <Skills/>
         <Contact />
         <Footer/>
       </div>
