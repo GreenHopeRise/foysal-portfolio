@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { div } from 'motion/react-client';
 const cardData = [
   {
     year: "2025 - present",
@@ -44,7 +45,17 @@ const cardData = [
 const Skills = () => {
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div>
+    <motion.h2
+            className="my-12 text-center text-3xl md:text-4xl font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1 }}
+          >
+            Skills
+          </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2  gap-6">
       {cardData.map((card, index) => (
         <motion.div
           key={index}
@@ -78,6 +89,7 @@ const Skills = () => {
         </motion.div>
       ))}
     </div>
+</div>
   )
 }
 
